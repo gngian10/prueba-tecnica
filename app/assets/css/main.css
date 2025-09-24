@@ -18,3 +18,15 @@
 .dark .shelf {
     @apply from-white/10 to-white/5 border-white/10;
 }
+
+::view-transition-group(*),
+::view-transition-old(*),
+::view-transition-new(*) {
+    animation-duration: 0.19s;
+    animation-timing-function: ease-out;
+}
+
+::view-transition-old(*),
+::view-transition-new(*) {
+    animation-duration: 0.19s;
+}

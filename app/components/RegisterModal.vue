@@ -97,7 +97,7 @@ async function onSubmit() {
 
                             <button
                                 :disabled="loading"
-                                class="w-full rounded-xl bg-black py-2 font-medium text-white disabled:opacity-50"
+                                class="w-full rounded-xl bg-black py-2 font-medium text-white disabled:opacity-50 cursor-pointer hover:bg-black/40"
                             >
                                 {{ loading ? "Enviando" : "Enviar" }}
                             </button>

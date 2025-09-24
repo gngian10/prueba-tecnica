@@ -27,7 +27,7 @@ const open = ref(false);
             <EventDetail :show="show!">
                 <template #actions>
                     <button
-                        class="mt-4 rounded-xl bg-black px-4 py-2 font-medium text-white cursor-pointer"
+                        class="mt-4 rounded-xl bg-black px-4 py-2 font-medium text-white cursor-pointer hover:bg-black/40"
                         @click="open = true"
                     >
                         Registrarme

@@ -18,6 +18,7 @@ const img = computed(
                 :src="img"
                 :alt="show.name"
                 class="w-full h-full object-cover"
+                :style="{ viewTransitionName: `poster-${show.id}` }"
             />
         </div>
 

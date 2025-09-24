@@ -17,6 +17,7 @@ const props = defineProps<{ show: TvShow }>();
                     "
                     :alt="show.name"
                     class="aspect-[3/4] w-full object-cover"
+                    :style="{ viewTransitionName: `poster-${show.id}` }"
                     loading="lazy"
                 />
             </div>
