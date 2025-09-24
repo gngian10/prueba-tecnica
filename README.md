@@ -1,75 +1,32 @@
-# Nuxt Minimal Starter
+## Cómo ejecutar el proyecto
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+1. **Crear el proyecto desde cero con `nuxi`**
 
-## Setup
+    - npx nuxi init prueba-tecnica
+    - cd prueba-tecnica
 
-Make sure to install dependencies:
+2. **Configurar Tailwind CSS (v4 con Nuxt 4)**
 
-```bash
-# npm
-npm install
+    - npm install tailwindcss @tailwindcss/vite
+    - En `nuxt.config.ts` agregar el plugin de Vite:
 
-# pnpm
-pnpm install
+        ```ts
+        import tailwindcss from "@tailwindcss/vite";
 
-# yarn
-yarn install
+        export default defineNuxtConfig({
+            vite: {
+                plugins: [tailwindcss()],
+            },
+            css: ["~/assets/css/main.css"],
+        });
+        ```
 
-# bun
-bun install
-```
+    - Crear el archivo `./app/assets/css/main.css`:
 
-## Development Server
+        ```css
+        @import "tailwindcss";
+        ```
 
-Start the development server on `http://localhost:3000`:
+3. **Asegurarse que la aplicación corra localmente**
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+    - npm run dev
