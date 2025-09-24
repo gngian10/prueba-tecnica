@@ -49,7 +49,7 @@ const apiPage = computed(() => Math.max(0, page.value - 1));
 
 const { data, pending, error } = await useFetch<TvShow[]>(
     () => `https://api.tvmaze.com/shows?page=${apiPage.value}`,
-    { key: () => `shows-${apiPage.value}` }
+    { key: () => `shows-${apiPage.value}`, server: false }
 );
 const shows = computed(() => data.value ?? []);
 

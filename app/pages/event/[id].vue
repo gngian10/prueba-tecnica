@@ -10,6 +10,7 @@ const {
     error,
 } = await useFetch<TvShow>(() => `https://api.tvmaze.com/shows/${id.value}`, {
     key: () => `show-${id.value}`,
+    server: false,
 });
 
 const open = ref(false);
