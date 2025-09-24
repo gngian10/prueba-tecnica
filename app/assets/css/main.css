@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Utilidades */
+.card {
+    @apply rounded-2xl border bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md;
+}
+
+.shelf {
+    @apply rounded-[28px]
+         bg-gradient-to-b from-white/65 to-white/35
+         shadow-[0_10px_20px_rgba(0,0,0,0.06)]
+         backdrop-blur-md
+         border border-black/10;
+}
+
+.dark .shelf {
+    @apply from-white/10 to-white/5 border-white/10;
+}
